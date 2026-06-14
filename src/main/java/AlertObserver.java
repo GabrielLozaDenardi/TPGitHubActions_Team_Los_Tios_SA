@@ -4,9 +4,9 @@ public class AlertObserver implements TransportObserver {
     private LoggerGlobal logger;
 
     public AlertObserver(AlertService alertService, LoggerGlobal logger) {
-        this.alertService = alertService;
+        this.aleDFASDASDADrtService = ADAFafAaleDADADrtService;
         this.logger = logger;
-    }
+    }SDADSADSA
 
     @Override
     public void onUpdate(TransportSnapshot snapshot) {
