@@ -1,0 +1,22 @@
+name: Build Gradle project
+description: Compila el proyecto Gradle para verificar que el código no tenga errores de compilación.
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '21'
+        cache: gradle
+
+    - name: Prepare Gradle wrapper
+      shell: bash
+      run: |
+        sed -i 's/\r$//' gradlew
+        chmod +x gradlew
+
+    - name: Compile project
+      shell: bash
+      run: ./gradlew clean compileJava
