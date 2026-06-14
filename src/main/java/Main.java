@@ -12,7 +12,7 @@ public class Main
         //2) Crear al menos 2 estrategias de transporte distintas.
         TransportStrategy taxi = new TaxiStrategy();
         TransportStrategy bicicleta = new BicicletaStrategy();
-        TransportStrategy colectivo = new ColectivoStrategy();
+        TransportStrategy colectivo = ColectivoStrategy();
 
         //3) Crear un TransportMonitor con una estrategia inicial.
         TransportMonitor monitoreo = new TransportMonitor(taxi);
